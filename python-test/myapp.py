@@ -1,0 +1,27 @@
+user_name=input("Enter the username to store in the file: ")
+if user_name:
+    with open('userinfo.txt','a') as file:
+        file.write(user_name+"\n")
+
+
+show_info=input("Do you want to see all usernames? y/n: ")
+if show_info=='y':
+    try:
+        with open('userinfo.txt','r') as file:
+            content=file.readlines()
+    except Exception as e:
+        print(e,type(e))
+    else:
+        for line in content:
+            print(f'{line.rstrip()}')
+
+
+
+
+
+
+
+
+
+
+# docker run -it-> interactive mode
