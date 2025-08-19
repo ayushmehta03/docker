@@ -2,7 +2,9 @@ FROM python
 
 WORKDIR /pythonapp
 
-COPY ./myapp.py .
+COPY ./api_demo.py .
+
+RUN pip install requests
 
 
-CMD ["python","myapp.py"]
+CMD ["python","api_demo.py"]
